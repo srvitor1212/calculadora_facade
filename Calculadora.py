@@ -27,9 +27,9 @@ class Calculadora:
         op = input('Operação ..: ')
         v2 = input('Valor 2 ...: ')
 
-        self.__val1 = v1
-        self.__val2 = v2
-        self.__oper = op
+        self.__val1 = float(v1)
+        self.__val2 = float(v2)
+        self.__oper = str(op)
 
     def _calcular(self, valor_1:float=0, valor_2:float=0, operacao:str='+'):
         
@@ -57,7 +57,7 @@ class Somar:
         
     @property
     def resultado(self):
-        return (float(self.__vl_1) + float(self.__vl_2))
+        return float(self.__vl_1 + self.__vl_2)
 
 
 class Subtrair:
@@ -67,7 +67,7 @@ class Subtrair:
         
     @property
     def resultado(self):
-        return (float(self.__vl_1) - float(self.__vl_2))
+        return float(self.__vl_1 - self.__vl_2)
 
 
 class Dividir:
@@ -77,7 +77,7 @@ class Dividir:
         
     @property
     def resultado(self):
-        return (float(self.__vl_1) / float(self.__vl_2))
+        return float(self.__vl_1 / self.__vl_2)
 
 
 class Multiplicar:
@@ -87,7 +87,7 @@ class Multiplicar:
         
     @property
     def resultado(self):
-        return (float(self.__vl_1) * float(self.__vl_2))
+        return float(self.__vl_1 * self.__vl_2)
 
 
 
